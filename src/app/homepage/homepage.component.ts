@@ -10,24 +10,23 @@ const jsonRes: any = {
     {
       id: '1',
       name: 'carousel',
-      properties: {
-        modules: [
-          {
-            id: '2',
-            name: 'carousel-item',
-            properties: {
-              text: 'Item 1!',
-            },
+      properties: {},
+      modules: [
+        {
+          id: '2',
+          name: 'carousel-item',
+          properties: {
+            text: 'Item 1!',
           },
-          {
-            id: '3',
-            name: 'carousel-item',
-            properties: {
-              text: 'Item 2!',
-            },
+        },
+        {
+          id: '3',
+          name: 'carousel-item',
+          properties: {
+            text: 'Item 2!',
           },
-        ],
-      },
+        },
+      ],
     },
     {
       id: '4',
@@ -35,6 +34,7 @@ const jsonRes: any = {
       properties: {
         list: ['Article 1', 'Article 2'],
       },
+      modules: [],
     },
   ],
 };
@@ -53,9 +53,5 @@ export class HomepageComponent implements OnInit {
 
   public ngOnInit(): void {
     this.jsonResp = jsonRes;
-  }
-
-  public trackById(module: any): string {
-    return module.id;
   }
 }

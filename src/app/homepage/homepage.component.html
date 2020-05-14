@@ -1,4 +1,1 @@
-<xyz-module
-  *ngFor="let module of jsonResp?.modules; trackBy: trackById"
-  [module]="module"
-></xyz-module>
+<xyz-modules-list [modules]="jsonResp?.modules || []"></xyz-modules-list>
